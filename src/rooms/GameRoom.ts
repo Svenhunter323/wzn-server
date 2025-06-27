@@ -4,6 +4,7 @@ import { GameState } from "./schemas/GameState";
 
 export class GameRoom extends Room<GameState> {
   onCreate(options: any) {
+    this.maxClients = 4;
     this.state = new GameState();
     console.log("[GameRoom] created");
   }

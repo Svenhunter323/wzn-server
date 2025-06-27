@@ -7,7 +7,7 @@ import { RoomInfo } from "./schemas/RoomInfo";
 
 export class LobbyRoom extends Room<LobbyState> {
   onCreate() {
-    this.setState(new LobbyState());
+    this.state = new LobbyState();
 
     // Safely update room list every 3 seconds
     this.clock.setInterval(() => this.updateRoomList(), 3000);
